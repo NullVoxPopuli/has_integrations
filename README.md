@@ -48,6 +48,10 @@ stripe_integration = user.integrations[:stripe]
 # if there wasn't already a stripe integration record.
 user.integrations[:stripe] = { "livemode" => false, "stripe_user_id" => 1 }
 
+# Get the stored config.
+user.integrations[:stripe].config
+# => { "livemode" => false, "stripe_user_id" => 1 }
+
 # Check if an Integration exists.
 user.integrations.has?(:stripe)
 # => true or false
